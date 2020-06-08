@@ -14,5 +14,6 @@ export default function generateStore(){
 		rootReducer,
 		composeEnhancers(applyMiddleware(thunk))
 	);
+	restoreSessionAction()(store.dispatch);
 	return store
 }
